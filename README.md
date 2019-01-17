@@ -39,7 +39,5 @@ From within the root directory:
 -npm install
 -npm build (to start webpack)
 -npm start (to start the server)
-/*
-
 
 # anna-chat-component

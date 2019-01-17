@@ -21,9 +21,8 @@ export const Chat = props => {
   const color = chatInfo.color;
   return (
     <div>
-      <span>{chatInfo.currentTimeStamp}</span>{' '}{' '}
       <span>{ isMod ? <img className='mod' width='18px' height='18px' src='https://s3-us-west-1.amazonaws.com/twitchchat/mod.png'/> : null }</span>
-      <span>{ isSub ? <img className='sub' width='18px' height='18px' src='https://s3-us-west-1.amazonaws.com/twitchchat/sub.png'/> : null }</span>
+      <span>{ isSub ? <img className='sub' width='18px' height='18px' src='https://s3-us-west-1.amazonaws.com/twitchchat/seagsub.png'/> : null }</span>
       <Username color={chatInfo.color}> {chatInfo.username}</Username>:{' '}
       <span dangerouslySetInnerHTML={{ __html: chatInfo.chat }} />
     </div>

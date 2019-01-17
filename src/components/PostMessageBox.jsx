@@ -8,6 +8,10 @@ import { Modal } from './Modal.jsx';
 const TextBoxContainer = styled.div`
   box-shadow: inset 0 1px 0 0 #dad8de;
   padding: 10px 20px 20px 20px;
+  position: absolute;
+  width: 89%;
+  bottom: 0;
+  background-color: inherit;
 `;
 
 const TextBox = styled.div`

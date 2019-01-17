@@ -6,7 +6,7 @@ import { Chat } from './Chat.jsx';
 
 const ChatBoxStyle = styled.div`
   padding: 10px;
-  height: 530px;
+  height: calc(100vh - 240px);
   overflow-x: hidden;
   overflow-y: scroll;
 `;

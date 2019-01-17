@@ -15,8 +15,12 @@ app.get('/users', (req, res) => {
       res.send(userObj);
     })
     .catch(err => {
-      console.error('from server side, err');
+      console.error('from server side', err);
     });
+});
+
+app.get('/time', (req, res) => {
+  console.log('🍄 YO IT HERE', req.query.timeStamp, req.query.phrase)
 });
 
 app.listen(port, console.log('listening on port ' + port));

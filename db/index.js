@@ -38,11 +38,11 @@ const User = sequelize.define('users', {
 
 
 
-User.bulkCreate(sampleUsers()).then(() => {
-  return User.findAll();
-}).then(users => {
-  console.log(users)
-});
+// User.bulkCreate(sampleUsers()).then(() => {
+//   return User.findAll();
+// }).then(users => {
+//   console.log(users)
+// });
 
 const Chat = sequelize.define('chats', {
   id: {

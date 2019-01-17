@@ -79,7 +79,7 @@ export class ChatContainer extends React.Component {
 
   generateRandomUser() {
     const id = generateRandomNumber(1, 502);
-    return axios.get('/users', {
+    return axios.get('http://localhost:3028/users', {
       params: { id }
     })
       .then(userObj => {
@@ -146,6 +146,13 @@ export class ChatContainer extends React.Component {
     });
   }
   render() {
+    function hashHandler() {
+      if(window.location.hash === '#/Clips') {
+        console.log('it changed')
+
+      }
+    }
+    window.addEventListener('hashchange', hashHandler, false);
     return (
       <App>
         <Header>Chat On Videos</Header>
