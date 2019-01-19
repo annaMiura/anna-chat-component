@@ -27,7 +27,7 @@ export class ChatContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      intervalID: '',
+      intervalID: [],
       twitchChats: []
     };
 
@@ -37,16 +37,12 @@ export class ChatContainer extends React.Component {
     this.emoteCheck = this.emoteCheck.bind(this);
     this.formatTime = this.formatTime.bind(this);
     this.postMessage = this.postMessage.bind(this);
+    this.test = this.test.bind(this);
   }
 
   componentDidMount() {
-    // FUTURE TO DO:
-    // async check to see if video id exists in database
-    //   .then(update video state with ID)
-    //   .then(grab all the chats for that video out of db and set twitchChats state)
-    //else
     const intervalID = setInterval(() => this.generateChatsAtRandomTimes(), 1000);
-    this.setState({intervalID});
+    this.setState({intervalID: [intervalID]});
     timer.start();
   }
 
@@ -145,14 +141,32 @@ export class ChatContainer extends React.Component {
       twitchChats: [...this.state.twitchChats, chatInfo]
     });
   }
-  render() {
-    function hashHandler() {
-      if(window.location.hash === '#/Clips') {
-        console.log('it changed')
 
-      }
-    }
-    window.addEventListener('hashchange', hashHandler, false);
+  test() {
+    console.log('🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥')
+
+  }
+  render() {
+    // console.log('outside =>', this)
+    // let intervalID = this.state.intervalID;
+    // const hashHandle = () => {
+    //   if(window.location.hash === '#/Videos') {
+    //     // console.log('location it changed')
+    //     this.state.intervalID.forEach(num => clearInterval(num));
+    //     // clearInterval(this.state.intervalID);
+    //     this.setState({intervalID: []});
+    //     console.log('inside =>', this)
+    //   } else if(window.location.hash === '#/Followers') {
+    //     console.log('Oh hey look, it is some followers!')
+    //     this.test();
+    //   } else if (window.location.hash === '#/') {
+    //     console.log('Here we go, back to the beginning fam')
+    //     const newIntervalID = setInterval(() => this.generateChatsAtRandomTimes(), 10000);
+    //     this.setState({intervalID: [...this.state.intervalID, newIntervalID]});
+    //   }
+    // }
+    // const thisHashHandler = hashHandle.bind(this);
+    // window.addEventListener('hashchange', thisHashHandler, {once:true});
     return (
       <App>
         <Header>Chat On Videos</Header>

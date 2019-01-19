@@ -8,14 +8,14 @@ const EmoteSelectorBox = styled.div`
   position: absolute;
   height: 300px;
   width: 296px;
-  top: 199px;
-  left: 0;
+  margin: 0;
+  bottom: 113px;
+  right: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
   border: 1px solid #dad8de;
-  margin: 262px 0px 8px 20px;
   border-radius: 4px;
   box-shadow: 0 2px 4px -1px rgba(0,0,0,.1), 0 2px 2px -2px rgba(0,0,0,.02), 0 1px 4px 0 rgba(0,0,0,.04);
 `;
