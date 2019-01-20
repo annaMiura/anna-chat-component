@@ -12,6 +12,7 @@ const TextBoxContainer = styled.div`
   width: 89%;
   bottom: 0;
   background-color: inherit;
+  border-left: solid 1px rgb(218, 216, 222);
 `;
 
 const TextBox = styled.div`

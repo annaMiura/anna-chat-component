@@ -11,7 +11,7 @@ export const generateRandomNumber = (minValue, maxValue) => {
 const globalEmoteArray = Object.keys(emotes.globalEmotes);
 const subEmoteArray = Object.keys(emotes.streamerEmotes);
 
-const randomBoolean = () => {
+export const randomBoolean = () => {
   const output = Math.random();
   return output >= 0.5;
 };

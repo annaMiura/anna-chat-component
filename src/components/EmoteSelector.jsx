@@ -30,7 +30,7 @@ const EmoteList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;s
+  padding: 20px;
   border-bottom: 1px solid #dad8de;
 `;
 

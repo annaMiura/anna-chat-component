@@ -6,9 +6,10 @@ import { Chat } from './Chat.jsx';
 
 const ChatBoxStyle = styled.div`
   padding: 10px;
-  height: calc(100vh - 240px);
+  height: calc(100vh - 189px);
   overflow-x: hidden;
   overflow-y: scroll;
+  border-left: solid 1px rgb(218, 216, 222);
 `;
 
 class ChatBox extends React.Component {

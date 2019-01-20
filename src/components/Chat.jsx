@@ -8,10 +8,8 @@ const Username = styled.span`
   color: ${props => props.color}
 `;
 
-const TimeStamp = styled.span`
-  font-size: 11px;
-  padding-left: .5rem;
-  padding-right: .5rem;
+const ChatStyle = styled.div`
+  padding: 2px 10px 0px 10px;
 `;
 
 export const Chat = props => {
@@ -20,11 +18,11 @@ export const Chat = props => {
   const isMod = chatInfo.mod_status;
   const color = chatInfo.color;
   return (
-    <div>
+    <ChatStyle>
       <span>{ isMod ? <img className='mod' width='18px' height='18px' src='https://s3-us-west-1.amazonaws.com/twitchchat/mod.png'/> : null }</span>
       <span>{ isSub ? <img className='sub' width='18px' height='18px' src='https://s3-us-west-1.amazonaws.com/twitchchat/seagsub.png'/> : null }</span>
       <Username color={chatInfo.color}> {chatInfo.username}</Username>:{' '}
       <span dangerouslySetInnerHTML={{ __html: chatInfo.chat }} />
-    </div>
+    </ChatStyle>
   );
 };
