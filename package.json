@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "nodemon server/index.js localhost 3028",
+    "start": "node server/index.js",
     "build": "webpack --mode production --watch",
     "seed": "node ./db/index.js"
   },
