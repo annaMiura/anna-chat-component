@@ -7,7 +7,7 @@ const port = process.env.PORT || 3028;
 const grabUsernameFromDb = require('../db');
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, '../dist')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // app.get('/users', (req, res) => {
 //   return grabUsernameFromDb(req.query.id)
